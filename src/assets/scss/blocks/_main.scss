@@ -1,0 +1,23 @@
+@forward "our-pricing";
+
+@use "../mixins/media-querys" as *;
+@use "../config/variables" as var;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 4.5rem;
+  background: var.$white;
+  background-repeat: no-repeat;
+  background-position: 50vw top;
+  @include toTablet {
+    background-image: url(../images/bg-top.svg);
+  }
+  @include fromTablet {
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position: right top, left bottom;
+  }
+}

@@ -1,0 +1,194 @@
+@use "../mixins/media-querys" as *;
+@use "../mixins/wrapper" as *;
+@use "../functions/rem" as *;
+@use "../config/variables" as var;
+
+.our-pricing {
+  text-align: center;
+  &__title {
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    color: var.$text-primary;
+  }
+}
+
+.our-pricing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    color: var.$light-gray;
+    &:first-of-type {
+      margin-right: 1.5rem;
+    }
+    &:last-of-type {
+      margin-left: 1.5rem;
+    }
+  }
+  &__button {
+    position: relative;
+    display: inline-block;
+    width: rem(56px);
+    height: rem(32px);
+    border-radius: rem(16px);
+    background-color: var.$very-light-blue;
+    background-image: var.$linear-gradient;
+    cursor: pointer;
+    transition: background-image 0.3s;
+    @include fromTablet {
+      &:hover {
+        background-image: unset;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: rem(4px);
+      top: rem(4px);
+      width: rem(24px);
+      height: rem(24px);
+      border-radius: 50%;
+      background-color: var.$white;
+      transition: transform 0.3s;
+    }
+    &--left {
+      &::before {
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
+
+.our-pricing-articles {
+  @include wrapper;
+  margin-top: 5rem;
+  @include fromDesktop {
+    display: flex;
+    align-items: center;
+  }
+  &--annualy {
+    .our-pricing-articles__price {
+      &--annualy {
+        display: inline-flex;
+      }
+      &--monthly {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    color: var(--text-primary);
+  }
+  &__price {
+    &--annualy,
+    &--monthly {
+      margin-top: 1.75rem;
+      margin-bottom: 1.75rem;
+      align-items: center;
+      color: var(--text-secondary);
+      span.price-number {
+        font-size: 4rem;
+      }
+      span.price-dolar {
+        font-size: 2.5rem;
+      }
+    }
+    &--annualy {
+      display: none;
+    }
+    &--monthly {
+      display: inline-flex;
+    }
+  }
+  &__item {
+    --border-color: #{var.$light-gray};
+    --text-primary: #{var.$text-primary};
+    --text-secondary: #{var.$text-secondary};
+    padding: rem(31px) rem(29px);
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 0.5rem 1rem 0.25rem rgba(0, 0, 0, 0.0625);
+    &.professional {
+      --text-primary: #{var.$white};
+      --text-secondary: #{var.$white};
+      background-image: var.$linear-gradient;
+      @include fromDesktop {
+        padding-top: rem(55px);
+        padding-bottom: rem(55px);
+      }
+      .our-pricing-articles__button {
+        color: var.$light-blue;
+        background-image: unset;
+        background-color: var.$white;
+        &:hover {
+          --border-hover: #{var.$white};
+          --text-hover: #{var.$white};
+          border: 1px solid var(--border-hover);
+          color: var(--text-hover);
+          background-color: transparent;
+        }
+      }
+    }
+    @include fromDesktop {
+      flex-basis: calc(100% / 3);
+    }
+    &:not(:last-of-type) {
+      @include toDesktop {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__button {
+    --border-hover: #{var.$light-blue};
+    --text-hover: #{var.$light-blue};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    min-height: rem(42px);
+    font-size: rem(14px);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var.$white;
+    border-radius: 0.5rem;
+    color: var.$white;
+    background-image: var.$linear-gradient;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s;
+    @include fromTablet {
+      &:hover {
+        border: 1px solid var(--border-hover);
+        color: var(--text-hover);
+        background-image: unset;
+      }
+    }
+  }
+}
+.our-pricing-articles-info {
+  list-style: none;
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: rem(54px);
+    font-size: rem(15px);
+    color: var(--text-primary);
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: rem(1px);
+      background-color: var(--border-color);
+    }
+    &:last-of-type {
+      &::after {
+        top: 100%;
+      }
+    }
+  }
+}

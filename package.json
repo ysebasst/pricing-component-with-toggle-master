@@ -1,0 +1,32 @@
+{
+  "name": "pricing-component-with-toggle-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Pricing component with toggle coding challenge](./design/desktop-preview.jpg)",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysebasst/pricing-component-with-toggle-master.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ysebasst/pricing-component-with-toggle-master/issues"
+  },
+  "homepage": "https://github.com/ysebasst/pricing-component-with-toggle-master#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/register": "^7.14.5",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0"
+  }
+}

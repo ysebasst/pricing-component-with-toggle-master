@@ -1,0 +1,11 @@
+extends ../template/template
+
+block main 
+  main.main 
+    section.our-pricing 
+      h1.our-pricing__title Our Pricing
+      .our-pricing-toggle
+        span.our-pricing-toggle__text Annualy
+        span.our-pricing-toggle__button(role="button" aria-label="button")
+        span.our-pricing-toggle__text Monthly
+      include ../blocks/our-pricing-articles

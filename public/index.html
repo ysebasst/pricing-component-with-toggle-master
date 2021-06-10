@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <title>Frontend Mentor | Pricing component with toggle</title>
+  </head>
+  <body> <span id="data"></span>
+    <main class="main"> 
+      <section class="our-pricing"> 
+        <h1 class="our-pricing__title">Our Pricing</h1>
+        <div class="our-pricing-toggle"><span class="our-pricing-toggle__text">Annualy</span><span class="our-pricing-toggle__button" role="button" aria-label="button"></span><span class="our-pricing-toggle__text">Monthly</span></div>
+        <div class="our-pricing-articles">
+          <article class="our-pricing-articles__item">
+            <h3 class="our-pricing-articles__title">Basic</h3>
+            <p class="our-pricing-articles__price"><span class="our-pricing-articles__price--monthly"><span class="price-dolar">$</span><span class="price-number">19.99</span></span><span class="our-pricing-articles__price--annualy"><span class="price-dolar">$</span><span class="price-number">199.99</span></span></p>
+            <ul class="our-pricing-articles-info"> 
+              <li class="our-pricing-articles-info__item">500 GB Storage</li>
+              <li class="our-pricing-articles-info__item">2 Users Allowed</li>
+              <li class="our-pricing-articles-info__item">Send up to 3 GB</li>
+            </ul><a class="our-pricing-articles__button" href="#">Learn More </a>
+          </article>
+          <article class="our-pricing-articles__item professional">
+            <h3 class="our-pricing-articles__title">Professional</h3>
+            <p class="our-pricing-articles__price"><span class="our-pricing-articles__price--monthly"><span class="price-dolar">$</span><span class="price-number">24.99</span></span><span class="our-pricing-articles__price--annualy"><span class="price-dolar">$</span><span class="price-number">249.99</span></span></p>
+            <ul class="our-pricing-articles-info"> 
+              <li class="our-pricing-articles-info__item">1 TB Storage</li>
+              <li class="our-pricing-articles-info__item">5 Users Allowed</li>
+              <li class="our-pricing-articles-info__item">Send up to 10 GB</li>
+            </ul><a class="our-pricing-articles__button" href="#">Learn More </a>
+          </article>
+          <article class="our-pricing-articles__item">
+            <h3 class="our-pricing-articles__title">Master</h3>
+            <p class="our-pricing-articles__price"><span class="our-pricing-articles__price--monthly"><span class="price-dolar">$</span><span class="price-number">39.99</span></span><span class="our-pricing-articles__price--annualy"><span class="price-dolar">$</span><span class="price-number">399.99</span></span></p>
+            <ul class="our-pricing-articles-info"> 
+              <li class="our-pricing-articles-info__item">2 TB Storage</li>
+              <li class="our-pricing-articles-info__item">10 Users Allowed</li>
+              <li class="our-pricing-articles-info__item">Send up to 20 GB</li>
+            </ul><a class="our-pricing-articles__button" href="#">Learn More </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/scripts.js"> </script>
+  </body>
+</html>

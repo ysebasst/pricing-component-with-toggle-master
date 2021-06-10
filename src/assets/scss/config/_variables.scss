@@ -1,0 +1,22 @@
+// ### ### COLORS ### ###
+$white: #f6f6fe;
+$light-gray: #b3b5c6;
+$text-primary: hsl(233, 13%, 49%);
+$text-secondary: hsl(232, 13%, 33%);
+$light-blue: hsl(237, 63%, 64%);
+$very-light-blue: hsl(236, 72%, 79%);
+
+// ### ### GRADIENTS ### ###
+$linear-gradient: linear-gradient(
+  to right,
+  hsl(236, 72%, 79%),
+  hsl(237, 63%, 64%)
+);
+
+// ### ### FONTS ### ###
+$font-size-default: 16px;
+
+// ### ### BREAKPOINTS ### ###
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1200px;
